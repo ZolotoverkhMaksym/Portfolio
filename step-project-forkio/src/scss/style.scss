@@ -1,0 +1,13 @@
+@import "normalize";
+@import "vars";
+@import "mixins";
+@import "main";
+
+@import "./../sections/header/header";
+@import "./../sections/editor/editor";
+
+@import "./../sections/features/features";
+
+@import "./../sections/reviews/reviews";
+
+@import "./../sections/pricing/pricing";

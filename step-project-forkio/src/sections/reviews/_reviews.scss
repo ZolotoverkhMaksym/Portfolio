@@ -1,0 +1,74 @@
+.reviews {
+	background-image: url("../img/reviews/reviews-bg.jpg");
+	background-size: cover;
+	background-position: center;
+	padding: 108px 0 25px;
+
+	&__list {
+		@extend %list-clear;
+		margin: 85px 0 115px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 110px;
+
+		@include mq(992px, max) {
+			margin: 85px 0 57px;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 45px;
+		}
+
+		@include mq(520px, max) {
+			margin: 53px 0 37px;
+			grid-template-columns: repeat(1, 1fr);
+			gap: 35px;
+		}
+	}
+
+	&__item {
+		text-align: center;
+	}
+
+	&__review {
+		font-family: "Lato", sans-serif;
+		font-style: italic;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 24px;
+		color: #ffffff;
+		margin-top: 30px;
+	}
+
+	&__text {
+		font-family: "Lato", sans-serif;
+		font-size: 14px;
+		line-height: 21px;
+		text-align: center;
+		color: #a291a5;
+		width: 887px;
+		margin: 0 auto;
+		position: relative;
+
+		&::after {
+			content: "";
+			width: 80%;
+			height: 2px;
+			background: #645766;
+			position: absolute;
+			bottom: -15px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		@include mq(992px, max) {
+			width: 100%;
+		}
+	}
+
+	@include mq(992px, max) {
+		padding-top: 85px;
+	}
+
+	@include mq(480px, max) {
+		padding-top: 57px;
+	}
+}
